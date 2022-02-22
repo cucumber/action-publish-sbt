@@ -1,0 +1,27 @@
+# These settings are inherited by other repos.
+repository:
+  # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
+
+  # A URL with more information about the repository
+  homepage: https://cucumber.io/
+
+  # A comma-separated list of topics to set on the repository
+  topics: cucumber,BDD,testing,TDD,test automation
+
+  private: false
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  has_downloads: false
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  allow_auto_merge: true
+  delete_branch_on_merge: true
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+collaborators:
+  - username: gaeljw
+    permission: admin
