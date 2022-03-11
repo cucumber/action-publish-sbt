@@ -1,4 +1,4 @@
-# These settings are inherited by other repos.
+# Duplicated from https://github.com/cucumber/.github because this repository needs to be more secure than most Cucumber repos
 repository:
   # See https://docs.github.com/en/rest/reference/repos#update-a-repository for all available settings.
 
