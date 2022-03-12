@@ -1,6 +1,6 @@
 [![Test](https://github.com/cucumber/action-publish-sbt/actions/workflows/test.yml/badge.svg)](https://github.com/cucumber/action-publish-sbt/actions/workflows/test.yml)
 
-# action-publish-mvn
+# action-publish-sbt
 
 Publishes a Scala module to [Maven Central](https://search.maven.org/)
 
