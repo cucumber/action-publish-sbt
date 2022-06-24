@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Fix test workflow
+
 ## [v1.0.0]
 
 ### Added
+
 - Publish to Maven Central from a given `working-directory`
 
 [Unreleased]: https://github.com/cucumber/action-publish-mvn/compare/v1.0.0...HEAD
