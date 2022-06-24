@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Fix test workflow
+- Update sbt-sonatype in test project to 3.9.13
 
 ## [v1.0.0]
 
