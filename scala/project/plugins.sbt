@@ -1,5 +1,5 @@
 // Cross compilation matrix
-addSbtPlugin("com.eed3si9n" % "sbt-projectmatrix" % "0.9.0")
+addSbtPlugin("com.eed3si9n" % "sbt-projectmatrix" % "0.9.1")
 
 // Release
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.13")
