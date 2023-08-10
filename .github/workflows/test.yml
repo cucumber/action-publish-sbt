@@ -27,7 +27,7 @@ jobs:
           version=0.0.$GITHUB_RUN_NUMBER
           echo "ThisBuild / version := \"$version\"" > version.sbt
           echo "::set-output name=version::$version"
-        working-directory: "scala"
+        working-directory: "test"
       - name: Test the action
         uses: ./
         with:
@@ -35,4 +35,4 @@ jobs:
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           nexus-username: ${{ secrets.SONATYPE_USERNAME }}
           nexus-password: ${{ secrets.SONATYPE_PASSWORD }}
-          working-directory: scala
+          working-directory: "test"
