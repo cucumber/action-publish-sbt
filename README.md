@@ -39,6 +39,6 @@ jobs:
         with:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          nexus-username: ${{ secrets.NEXUS_USERNAME }}
-          nexus-password: ${{ secrets.NEXUS_PASSWORD }}
+          nexus-username: ${{ secrets.SONATYPE_USERNAME }}
+          nexus-password: ${{ secrets.SONATYPE_PASSWORD }}
           working-directory: "scala"
