@@ -27,7 +27,7 @@ jobs:
         run: |
           version=0.0.$GITHUB_RUN_NUMBER
           echo "ThisBuild / version := \"$version\"" > version.sbt
-          echo "::set-output name=version::$version"
+          echo "version=$version" >> $GITHUB_OUTPUT
         working-directory: "test"
       - name: Test the action
         uses: ./
