@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - test: Fix test workflow to use `sbt/setup-sbt` action
 - test: Replace deprecated `::set-output`
+- test: Update sbt-release plugin
 
 ## [v1.0.1]
 
