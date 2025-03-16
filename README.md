@@ -4,7 +4,7 @@
 
 Publishes a Scala module to [Maven Central](https://search.maven.org/)
 
-Needs Java to be installed first.
+Needs Java & SBT to be installed first.
 
 ## Inputs
 
@@ -25,8 +25,8 @@ on:
       - "release/*"
 
 jobs:
-  publish-ui:
-    name: Publish UI package to mvn
+  publish-sbt:
+    name: Publish SBT package to Maven Central
     runs-on: ubuntu-latest
     environment: Release
     steps:
@@ -34,11 +34,13 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '11'
-      - name: Test the action
+      - uses: sbt/setup-sbt@v1
+      - name: Publish
         uses: cucumber/action-publish-sbt@v1.0.0
         with:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           nexus-username: ${{ secrets.SONATYPE_USERNAME }}
           nexus-password: ${{ secrets.SONATYPE_PASSWORD }}
-          working-directory: "scala"
+          working-directory: "."
+```
