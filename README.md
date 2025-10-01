@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: '11'
+          java-version: '17'
       - uses: sbt/setup-sbt@v1
       - name: Publish
         uses: cucumber/action-publish-sbt@v1.0.0
