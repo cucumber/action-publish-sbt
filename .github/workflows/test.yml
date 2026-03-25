@@ -22,7 +22,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - uses: sbt/setup-sbt@efad9461479a6e19d0b4aa72d2e1188c5fc04e48 # v1.1.21.1.16
+      - uses: sbt/setup-sbt@508b753e53cb6095967669e0911487d2b9bc9f41 # v1.1.22.1.16
       - name: Set unique package version
         id: set-version
         run: |
