@@ -6,31 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.3] - 2026-05-13
 ### Fixed
 - Fix code injection via template expansion
 
 ## [v1.0.2]
-
 ### Changed
-
 - test: Fix test workflow to use `sbt/setup-sbt` action
 - test: Replace deprecated `::set-output`
 - test: Update sbt-release plugin
 
 ## [v1.0.1]
-
 ### Changed
-
 - Fix test workflow
 - Update sbt-sonatype in test project to 3.9.13
 
 ## [v1.0.0]
-
 ### Added
-
 - Publish to Maven Central from a given `working-directory`
 
 [Unreleased]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.2...HEAD
+[1.0.3]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/cucumber/action-publish-sbt/compare/fc0ace7b03d554d390b3e9d4549c5c16ea037c41...v1.0.0
