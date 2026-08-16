@@ -1,5 +1,5 @@
 name: 'Publish to Sonatype'
-description: 'Publish a scala package from a build.sbt'
+description: 'Publish a scala package from a build.sbt using sbt-ci-release'
 inputs:
   gpg-private-key:
     description: GPG private key for signing the published artifacts
@@ -21,7 +21,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: import GPG key
+    - name: import and verify GPG key
       run: |
         echo -e "${INPUT_GPG_PRIVATE_KEY}" | gpg --batch --import --no-tty
         echo "hello world" > temp.txt
@@ -35,13 +35,16 @@ runs:
       env:
         INPUT_GPG_PRIVATE_KEY: ${{ inputs.gpg-private-key }}
         INPUT_GPG_PASSPHRASE: ${{ inputs.gpg-passphrase }}
-    - name: publish artefacts
+    - name: publish artefacts with sbt-ci-release
+      # The sbt-ci-release plugin expects PGP_SECRET to be set to the base64-encoded GPG private key, so we do that here.
       run: |
-        sbt "release cross with-defaults"
+        export PGP_SECRET="$(echo -e "${INPUT_GPG_PRIVATE_KEY}" | base64 -w0)"
+        sbt ci-release
       shell: bash
       env:
         SONATYPE_USERNAME: ${{ inputs.nexus-username }}
         SONATYPE_PASSWORD: ${{ inputs.nexus-password }}
+        INPUT_GPG_PRIVATE_KEY: ${{ inputs.gpg-private-key }}
         PGP_PASSPHRASE: ${{ inputs.gpg-passphrase }}
       working-directory: ${{ inputs.working-directory }}
 

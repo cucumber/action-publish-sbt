@@ -1,7 +1,3 @@
-import ReleaseTransformations._
-import xerial.sbt.Sonatype.sonatypeSettings
-import xerial.sbt.Sonatype.sonatypeCentralHost
-
 // Metadata
 
 ThisBuild / organization := "io.cucumber"
@@ -44,28 +40,3 @@ lazy val root = (projectMatrix in file("."))
     name := "test-release-automation-sbt"
   )
   .jvmPlatform(scalaVersions = Seq(scala3, scala213, scala212))
-
-// Release & Publish
-
-Global / publishMavenStyle := true
-Global / publishTo := sonatypePublishToBundle.value
-// https://github.com/xerial/sbt-sonatype?tab=readme-ov-file#sonatype-central-host
-ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
-
-// https://github.com/xerial/sbt-sonatype#using-with-sbt-release-plugin
-releaseCrossBuild := true
-releaseVersionBump := sbtrelease.Version.Bump.NextStable // Required since 1.4.0
-releaseProcess := Seq[ReleaseStep](
-  checkSnapshotDependencies,
-  inquireVersions,
-  runClean,
-  runTest,
-  setReleaseVersion,
-  // commitReleaseVersion,
-  // tagRelease,
-  releaseStepCommandAndRemaining("publishSigned"),
-  releaseStepCommand("sonatypeBundleRelease"),
-  setNextVersion,
-  // commitNextVersion,
-  // pushChanges
-)

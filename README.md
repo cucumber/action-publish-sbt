@@ -2,9 +2,10 @@
 
 # action-publish-sbt
 
-Publishes a Scala module to [Maven Central](https://search.maven.org/)
+Publishes a Scala module to [Maven Central](https://central.sonatype.com/) using [sbt-ci-release](https://github.com/sbt/sbt-ci-release).
 
-Needs Java & SBT to be installed first.
+Needs Java & SBT to be installed first, and the `sbt-ci-release` plugin
+added to your project's `project/plugins.sbt`.
 
 ## Inputs
 
@@ -21,8 +22,8 @@ name: Publish
 
 on:
   push:
-    branches:
-      - "release/*"
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   publish-sbt:

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Migrate the action to use [sbt-ci-release](https://github.com/sbt/sbt-ci-release) instead of `sbt-release`/`sbt-sonatype`/`sbt-pgp`.
+
 ## [1.0.3] - 2026-05-13
 ### Fixed
 - Fix code injection via template expansion
