@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-16
 ### Changed
-
 - Migrate the action to use [sbt-ci-release](https://github.com/sbt/sbt-ci-release) instead of `sbt-release`/`sbt-sonatype`/`sbt-pgp`.
 
 ## [1.0.3] - 2026-05-13
@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Publish to Maven Central from a given `working-directory`
 
 [Unreleased]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.2...HEAD
+[1.1.0]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.2...v1.1.0
 [1.0.3]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/cucumber/action-publish-sbt/compare/v1.0.0...v1.0.1
